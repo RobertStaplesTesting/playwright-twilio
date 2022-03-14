@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import { checkForDifferentSid, sleep } from "../src/helpers";
-const accountSid = "AC0d79572e5a83033eaaba41c46e76e0d8";
-const authToken = "971ffbae54d4387df8c7d81e77bcf1eb";
+const accountSid = process.env.accountId;
+const authToken = process.env.accountId;
 const client = require("twilio")(accountSid, authToken);
 
 let record: any;
