@@ -7,7 +7,7 @@ const client = require("twilio")(accountSid, authToken);
 let record: any;
 
 test.beforeAll(async () => {
-  const response = await client.messages.list();
+  const response = await client.messages.list({limit: 1);
   record = await response[0];
 });
 
